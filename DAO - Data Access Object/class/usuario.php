@@ -62,8 +62,21 @@
 				$this->setIdusuario($row['idusuario']);
 				$this->setDeslogin($row['deslogin']);
 				$this->setDessenha($row['dessenha']);
-				$this->setDtcadastro($row['dtcadastro']);
+				$this->setDtcadastro(new DateTime($row['dtcadastro']));
 			}
+
+		}
+
+		public function __toString(){
+
+			return json_encode(array(
+
+				"idusuario"=>$this->getIdusuario(),
+				"deslogin"=>$this->getDeslogin(),
+				"dessenha"=>$this->getDessenha(),
+				"dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")//Formata a hora recebida senão ira mostrar mais informações do que o necessário
+
+				));
 
 		}
 

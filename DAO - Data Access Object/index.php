@@ -21,15 +21,22 @@ require_once("config.php");
 //$usuario->login ("Bruno", "!@#$%");
 //echo $usuario;
 
-//Sem método construct
+//Criando um novo usuário sem método construct
 // $aluno = new Usuario();
 // $aluno->setDeslogin("aluno");
 // $aluno->setDessenha("4lun0");
 // $aluno->insert();
 //echo $aluno;
 
-//Com método construct
-$pessoa = new Usuario("Mardu", "marduca31");
-$pessoa->insert();
-echo $pessoa;
+//Criando um novo usuário com método construct
+// $pessoa = new Usuario("Mardu", "marduca31");
+// $pessoa->insert();
+// echo $pessoa;
+
+$usuario = new Usuario();
+
+$usuario->loadById(7);
+
+$usuario->update("Maria do Carmo", "marduca3311");
+echo $usuario;
 ?>

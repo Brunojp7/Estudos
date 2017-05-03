@@ -33,10 +33,14 @@ require_once("config.php");
 // $pessoa->insert();
 // echo $pessoa;
 
+// //Alterar um usuário
+// $usuario = new Usuario();
+// $usuario->loadById(7);
+// $usuario->update("Maria do Carmo", "marduca3311");
+// echo $usuario;
+
 $usuario = new Usuario();
-
 $usuario->loadById(7);
-
-$usuario->update("Maria do Carmo", "marduca3311");
+$usuario->delete();
 echo $usuario;
 ?>

@@ -17,8 +17,19 @@ require_once("config.php");
 
 //Carrega um usuário usando login e a senha
 
-$usuario = new Usuario();
-$usuario->login ("Bruno", "!@#$%");
+//$usuario = new Usuario();
+//$usuario->login ("Bruno", "!@#$%");
+//echo $usuario;
 
-echo $usuario;
+//Sem método construct
+// $aluno = new Usuario();
+// $aluno->setDeslogin("aluno");
+// $aluno->setDessenha("4lun0");
+// $aluno->insert();
+//echo $aluno;
+
+//Com método construct
+$pessoa = new Usuario("Mardu", "marduca31");
+$pessoa->insert();
+echo $pessoa;
 ?>

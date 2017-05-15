@@ -1,0 +1,10 @@
+HTTPD.CONF
+- Nome do arquivo de configuração do Apache
+
+PHP.ini
+- Nome o arquivo de configuração do PhP
+
+Portas
+80 - HTTP
+443 - HTTPS
+3306 - SQL

@@ -1,0 +1,18 @@
+<?php 
+
+$image = imagecreatefromjpeg("certificado.jpg");
+
+$titleColor = imagecolorallocate($image, 0, 0, 0);
+$gray = imagecolorallocate($image, 100, 100, 100);
+
+imagettftext($image, 32, 0, 430, 150, $titleColor, "Bevan-Regular.ttf", "CERTIFICADO");
+imagettftext($image, 32, 0, 380, 350, $titleColor, "Playball-Regular.ttf", "Bruno Jacinto Parpagnoli");
+imagestring($image, 3, 400, 370, utf8_decode("Concluído em: ") . date("d/m/Y"), $titleColor);
+
+header("Content-type: image/jpeg");
+
+imagejpeg($image);
+imagedestroy($image);
+
+
+ ?>

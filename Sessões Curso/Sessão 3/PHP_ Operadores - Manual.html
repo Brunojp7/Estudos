@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://php.net/manual/pt_BR/language.operators.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR" class=" js flexbox flexboxlegacy datauri"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <title>PHP: Operadores - Manual </title>
+
+ <link rel="shortcut icon" href="http://php.net/favicon.ico">
+ <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+ <link rel="alternate" type="application/atom+xml" href="http://php.net/releases/feed.php" title="PHP Release feed">
+ <link rel="alternate" type="application/atom+xml" href="http://php.net/feed.atom" title="PHP: Hypertext Preprocessor">
+
+ <link rel="canonical" href="http://php.net/manual/pt_BR/language.operators.php">
+ <link rel="shorturl" href="http://php.net/operators">
+ <link rel="alternate" href="http://php.net/operators" hreflang="x-default">
+
+ <link rel="contents" href="http://php.net/manual/pt_BR/index.php">
+ <link rel="index" href="http://php.net/manual/pt_BR/langref.php">
+ <link rel="prev" href="http://php.net/manual/pt_BR/language.expressions.php">
+ <link rel="next" href="http://php.net/manual/pt_BR/language.operators.precedence.php">
+
+ <link rel="alternate" href="http://php.net/manual/en/language.operators.php" hreflang="en">
+ <link rel="alternate" href="http://php.net/manual/pt_BR/language.operators.php" hreflang="pt_BR">
+ <link rel="alternate" href="http://php.net/manual/zh/language.operators.php" hreflang="zh">
+ <link rel="alternate" href="http://php.net/manual/fr/language.operators.php" hreflang="fr">
+ <link rel="alternate" href="http://php.net/manual/de/language.operators.php" hreflang="de">
+ <link rel="alternate" href="http://php.net/manual/ja/language.operators.php" hreflang="ja">
+ <link rel="alternate" href="http://php.net/manual/ro/language.operators.php" hreflang="ro">
+ <link rel="alternate" href="http://php.net/manual/ru/language.operators.php" hreflang="ru">
+ <link rel="alternate" href="http://php.net/manual/es/language.operators.php" hreflang="es">
+ <link rel="alternate" href="http://php.net/manual/tr/language.operators.php" hreflang="tr">
+
+<link rel="stylesheet" type="text/css" href="./PHP_ Operadores - Manual_files/cached.php" media="screen">
+<link rel="stylesheet" type="text/css" href="./PHP_ Operadores - Manual_files/cached(1).php" media="screen">
+<link rel="stylesheet" type="text/css" href="./PHP_ Operadores - Manual_files/cached(2).php" media="screen">
+<link rel="stylesheet" type="text/css" href="./PHP_ Operadores - Manual_files/cached(3).php" media="screen">
+
+ <!--[if lte IE 7]>
+ <link rel="stylesheet" type="text/css" href="http://php.net/styles/workarounds.ie7.css" media="screen">
+ <![endif]-->
+
+ <!--[if lte IE 8]>
+ <script type="text/javascript">
+  window.brokenIE = true;
+ </script>
+ <![endif]-->
+
+ <!--[if lte IE 9]>
+ <link rel="stylesheet" type="text/css" href="http://php.net/styles/workarounds.ie9.css" media="screen">
+ <![endif]-->
+
+ <!--[if IE]>
+ <script type="text/javascript" src="http://php.net/js/ext/html5.js"></script>
+ <![endif]-->
+
+ <!--<base href="http://php.net/manual/pt_BR/language.operators.php">--><base href=".">
+
+</head>
+<body class="docs ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="http://php.net/" class="brand"><img src="./PHP_ Operadores - Manual_files/php-logo.svg" width="48" height="24" alt="php"></a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input type="checkbox" id="mainmenu-toggle">
+    <ul class="nav">
+      <li class=""><a href="http://php.net/downloads">Downloads</a></li>
+      <li class="active"><a href="http://php.net/docs.php">Documentation</a></li>
+      <li class=""><a href="http://php.net/get-involved">Get Involved</a></li>
+      <li class=""><a href="http://php.net/support">Help</a></li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="http://php.net/search.php">
+      <input type="hidden" name="show" value="quickref">
+      <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="tt-hint search-query" type="text" autocomplete="off" spellcheck="off" disabled="" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input type="search" name="pattern" class="search-query tt-query" placeholder="Search" accesskey="s" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><input type="submit" style="visibility: hidden; position: fixed"><span style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: &quot;Fira Sans&quot;, &quot;Source Sans Pro&quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></span><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"></span></span>
+    </form>
+  </div>
+  <div id="flash-message"></div>
+</nav>
+<div class="headsup"><a href="http://php.net/index.php#id2017-03-16-2">PHP 7.1.3 Released</a></div>
+<nav id="trick"><div><dl>
+<dt><a href="http://php.net/manual/en/getting-started.php">Getting Started</a></dt>
+	<dd><a href="http://php.net/manual/en/introduction.php">Introduction</a></dd>
+	<dd><a href="http://php.net/manual/en/tutorial.php">A simple tutorial</a></dd>
+<dt><a href="http://php.net/manual/en/langref.php">Language Reference</a></dt>
+	<dd><a href="http://php.net/manual/en/language.basic-syntax.php">Basic syntax</a></dd>
+	<dd><a href="http://php.net/manual/en/language.types.php">Types</a></dd>
+	<dd><a href="http://php.net/manual/en/language.variables.php">Variables</a></dd>
+	<dd><a href="http://php.net/manual/en/language.constants.php">Constants</a></dd>
+	<dd><a href="http://php.net/manual/en/language.expressions.php">Expressions</a></dd>
+	<dd><a href="http://php.net/manual/en/language.operators.php">Operators</a></dd>
+	<dd><a href="http://php.net/manual/en/language.control-structures.php">Control Structures</a></dd>
+	<dd><a href="http://php.net/manual/en/language.functions.php">Functions</a></dd>
+	<dd><a href="http://php.net/manual/en/language.oop5.php">Classes and Objects</a></dd>
+	<dd><a href="http://php.net/manual/en/language.namespaces.php">Namespaces</a></dd>
+	<dd><a href="http://php.net/manual/en/language.errors.php">Errors</a></dd>
+	<dd><a href="http://php.net/manual/en/language.exceptions.php">Exceptions</a></dd>
+	<dd><a href="http://php.net/manual/en/language.generators.php">Generators</a></dd>
+	<dd><a href="http://php.net/manual/en/language.references.php">References Explained</a></dd>
+	<dd><a href="http://php.net/manual/en/reserved.variables.php">Predefined Variables</a></dd>
+	<dd><a href="http://php.net/manual/en/reserved.exceptions.php">Predefined Exceptions</a></dd>
+	<dd><a href="http://php.net/manual/en/reserved.interfaces.php">Predefined Interfaces and Classes</a></dd>
+	<dd><a href="http://php.net/manual/en/context.php">Context options and parameters</a></dd>
+	<dd><a href="http://php.net/manual/en/wrappers.php">Supported Protocols and Wrappers</a></dd>
+</dl>
+<dl>
+<dt><a href="http://php.net/manual/en/security.php">Security</a></dt>
+	<dd><a href="http://php.net/manual/en/security.intro.php">Introduction</a></dd>
+	<dd><a href="http://php.net/manual/en/security.general.php">General considerations</a></dd>
+	<dd><a href="http://php.net/manual/en/security.cgi-bin.php">Installed as CGI binary</a></dd>
+	<dd><a href="http://php.net/manual/en/security.apache.php">Installed as an Apache module</a></dd>
+	<dd><a href="http://php.net/manual/en/security.sessions.php">Session Security</a></dd>
+	<dd><a href="http://php.net/manual/en/security.filesystem.php">Filesystem Security</a></dd>
+	<dd><a href="http://php.net/manual/en/security.database.php">Database Security</a></dd>
+	<dd><a href="http://php.net/manual/en/security.errors.php">Error Reporting</a></dd>
+	<dd><a href="http://php.net/manual/en/security.globals.php">Using Register Globals</a></dd>
+	<dd><a href="http://php.net/manual/en/security.variables.php">User Submitted Data</a></dd>
+	<dd><a href="http://php.net/manual/en/security.magicquotes.php">Magic Quotes</a></dd>
+	<dd><a href="http://php.net/manual/en/security.hiding.php">Hiding PHP</a></dd>
+	<dd><a href="http://php.net/manual/en/security.current.php">Keeping Current</a></dd>
+<dt><a href="http://php.net/manual/en/features.php">Features</a></dt>
+	<dd><a href="http://php.net/manual/en/features.http-auth.php">HTTP authentication with PHP</a></dd>
+	<dd><a href="http://php.net/manual/en/features.cookies.php">Cookies</a></dd>
+	<dd><a href="http://php.net/manual/en/features.sessions.php">Sessions</a></dd>
+	<dd><a href="http://php.net/manual/en/features.xforms.php">Dealing with XForms</a></dd>
+	<dd><a href="http://php.net/manual/en/features.file-upload.php">Handling file uploads</a></dd>
+	<dd><a href="http://php.net/manual/en/features.remote-files.php">Using remote files</a></dd>
+	<dd><a href="http://php.net/manual/en/features.connection-handling.php">Connection handling</a></dd>
+	<dd><a href="http://php.net/manual/en/features.persistent-connections.php">Persistent Database Connections</a></dd>
+	<dd><a href="http://php.net/manual/en/features.safe-mode.php">Safe Mode</a></dd>
+	<dd><a href="http://php.net/manual/en/features.commandline.php">Command line usage</a></dd>
+	<dd><a href="http://php.net/manual/en/features.gc.php">Garbage Collection</a></dd>
+	<dd><a href="http://php.net/manual/en/features.dtrace.php">DTrace Dynamic Tracing</a></dd>
+</dl>
+<dl>
+<dt><a href="http://php.net/manual/en/funcref.php">Function Reference</a></dt>
+	<dd><a href="http://php.net/manual/en/refs.basic.php.php">Affecting PHP's Behaviour</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.audio.php">Audio Formats Manipulation</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.remote.auth.php">Authentication Services</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.cmdline.php">Command Line Specific Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.compression.php">Compression and Archive Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.creditcard.php">Credit Card Processing</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.crypto.php">Cryptography Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.database.php">Database Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.calendar.php">Date and Time Related Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.fileprocess.file.php">File System Related Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.international.php">Human Language and Character Encoding Support</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.image.php">Image Processing and Generation</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.remote.mail.php">Mail Related Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.math.php">Mathematical Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.nontext.php">Non-Text MIME Output</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.fileprocess.process.php">Process Control Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.basic.other.php">Other Basic Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.remote.other.php">Other Services</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.search.php">Search Engine Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.server.php">Server Specific Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.basic.session.php">Session Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.basic.text.php">Text Processing</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.basic.vartype.php">Variable and Type Related Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.webservice.php">Web Services</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.windows.php">Windows Only Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.xml.php">XML Manipulation</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.ui.php">GUI Extensions</a></dd>
+</dl>
+<dl>
+<dt>Keyboard Shortcuts</dt><dt>?</dt>
+<dd>This help</dd>
+<dt>j</dt>
+<dd>Next menu item</dd>
+<dt>k</dt>
+<dd>Previous menu item</dd>
+<dt>g p</dt>
+<dd>Previous man page</dd>
+<dt>g n</dt>
+<dd>Next man page</dd>
+<dt>G</dt>
+<dd>Scroll to bottom</dd>
+<dt>g g</dt>
+<dd>Scroll to top</dd>
+<dt>g h</dt>
+<dd>Goto homepage</dd>
+<dt>g s</dt>
+<dd>Goto search<br>(current page)</dd>
+<dt>/</dt>
+<dd>Focus search box</dd>
+</dl></div></nav>
+<div id="goto">
+    <div class="search">
+         <div class="text"></div>
+         <div class="results"><ul></ul></div>
+   </div>
+</div>
+
+  <div id="breadcrumbs" class="clearfix">
+    <div id="breadcrumbs-inner">
+          <div class="next">
+        <a href="http://php.net/manual/pt_BR/language.operators.precedence.php">
+          Precedência de Operadores »
+        </a>
+      </div>
+              <div class="prev">
+        <a href="http://php.net/manual/pt_BR/language.expressions.php">
+          « Expressões        </a>
+      </div>
+          <ul>
+            <li><a href="http://php.net/manual/pt_BR/index.php">Manual do PHP</a></li>      <li><a href="http://php.net/manual/pt_BR/langref.php">Referência da Linguagem</a></li>      </ul>
+    </div>
+  </div>
+
+
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+  <div class="page-tools">
+    <div class="change-language">
+      <form action="http://php.net/manual/change.php" method="get" id="changelang" name="changelang">
+        <fieldset>
+          <label for="changelang-langs">Change language:</label>
+          <select onchange="document.changelang.submit()" name="page" id="changelang-langs">
+            <option value="en/language.operators.php">English</option>
+            <option value="pt_BR/language.operators.php" selected="selected">Brazilian Portuguese</option>
+            <option value="zh/language.operators.php">Chinese (Simplified)</option>
+            <option value="fr/language.operators.php">French</option>
+            <option value="de/language.operators.php">German</option>
+            <option value="ja/language.operators.php">Japanese</option>
+            <option value="ro/language.operators.php">Romanian</option>
+            <option value="ru/language.operators.php">Russian</option>
+            <option value="es/language.operators.php">Spanish</option>
+            <option value="tr/language.operators.php">Turkish</option>
+            <option value="help-translate.php">Other</option>
+          </select>
+        </fieldset>
+      </form>
+    </div>
+    <div class="edit-bug">
+      <a href="https://edit.php.net/?project=PHP&amp;perm=pt_BR/language.operators.php">Edit</a>
+      <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=language.operators">Report a Bug</a>
+    </div>
+  </div><div id="language.operators" class="chapter">
+  <h1>Operadores<a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#language.operators"> ¶</a></h1>
+<h2>Índice<a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#language.operators"> ¶</a></h2><ul class="chunklist chunklist_chapter"><li><a href="http://php.net/manual/pt_BR/language.operators.precedence.php">Precedência de Operadores</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.arithmetic.php">Operadores Aritméticos</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.assignment.php">Operadores de Atribuição</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.bitwise.php">Operadores bit a bit (bitwise)</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.comparison.php">Operadores de Comparação</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.errorcontrol.php">Operadores de controle de erro</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.execution.php">Operadores de Execução</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.increment.php">Operadores de Incremento/Decremento</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.logical.php">Operadores Lógicos</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.string.php">Operadores de String</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.array.php">Operadores de Arrays</a></li><li><a href="http://php.net/manual/pt_BR/language.operators.type.php">Operadores de tipo</a></li></ul>
+
+  <p class="simpara">
+   Um operador é algo que recebe um ou mais valores (ou
+   expressões, no jargão de programação) e que devolve outro valor (e por isso
+   os próprios construtores se tormam expressões).
+  </p>
+  <p class="para">
+   Operadores podem ser agrupados segundo o número de valores que aceitam. Operadores
+   unários recebem um único valor, por exemplo <em>!</em> (o
+   <a href="http://php.net/manual/pt_BR/language.operators.logical.php" class="link">operador lógico de negação</a>) ou
+   <em>++</em> (o
+   <a href="http://php.net/manual/pt_BR/language.operators.increment.php" class="link">operador de incremento</a>).
+   Operadores binários aceitam dois valores, como os
+   <a href="http://php.net/manual/pt_BR/language.operators.arithmetic.php" class="link">operadores aritméticos</a>
+   <em>+</em> (soma) e <em>-</em> (subtração), além
+   da maioria dos operadores PHP dessa categoria. Finalmente há um
+   único <a href="http://php.net/manual/pt_BR/language.operators.comparison.php#language.operators.comparison.ternary" class="link">operador
+   ternário</a>, <em>? :</em>, que aceita três valores; normalmente
+   conhecido simplesmente como "o operador ternário" (embora um
+   nome melhor fosse operador condicional).
+  </p>
+  <p class="para">
+   A lista completa dos operadores no PHP está na seção sobre
+   <a href="http://php.net/manual/pt_BR/language.operators.precedence.php" class="link">Precedência de Operadores</a>.
+   Essa seção também explica precedência e combinações, que governam
+   exatamente como expressões contendo vários operadores são
+   avaliados.
+  </p>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+ </div>
+
+<section id="usernotes">
+ <div class="head">
+  <span class="action"><a href="http://php.net/manual/add-note.php?sect=language.operators&amp;redirect=http://php.net/manual/pt_BR/language.operators.php"><img src="./PHP_ Operadores - Manual_files/notes-add@2x.png" alt="add a note" width="12" height="12"> <small>add a note</small></a></span>
+  <h3 class="title">User Contributed Notes <span class="count">13 notes</span></h3>
+ </div><div id="allnotes">
+  <div class="note" id="43111">  <div class="votes">
+    <div id="Vu43111">
+    <a href="http://php.net/manual/vote-note.php?id=43111&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd43111">
+    <a href="http://php.net/manual/vote-note.php?id=43111&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V43111" title="68% like this...">
+    167
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#43111" class="name"><strong class="user"><em>Anonymous</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#43111"> ¶</a><div class="date" title="2004-06-09 05:58"><strong>12 years ago</strong></div>
+  <div class="text" id="Hcom43111" style="opacity: 1;">
+<div class="phpcode"><code><span class="html">
+of course this should be clear, but i think it has to be mentioned espacially:<br><br>AND is not the same like &amp;&amp;<br><br>for example:<br><br><span class="default">&lt;?php $a </span><span class="keyword">&amp;&amp; </span><span class="default">$b </span><span class="keyword">|| </span><span class="default">$c</span><span class="keyword">; </span><span class="default">?&gt;<br></span>is not the same like<br><span class="default">&lt;?php $a </span><span class="keyword">AND </span><span class="default">$b </span><span class="keyword">|| </span><span class="default">$c</span><span class="keyword">; </span><span class="default">?&gt;<br></span><br>the first thing is<br>(a and b) or c<br><br>the second<br>a and (b or c)<br><br>'cause || has got a higher priority than and, but less than &amp;&amp;<br><br>of course, using always [ &amp;&amp; and || ] or [ AND and OR ] would be okay, but than you should at least respect the following:<br><br><span class="default">&lt;?php $a </span><span class="keyword">= </span><span class="default">$b </span><span class="keyword">&amp;&amp; </span><span class="default">$c</span><span class="keyword">; </span><span class="default">?&gt;<br>&lt;?php $a </span><span class="keyword">= </span><span class="default">$b </span><span class="keyword">AND </span><span class="default">$c</span><span class="keyword">; </span><span class="default">?&gt;<br></span><br>the first code will set $a to the result of the comparison $b with $c, both have to be true, while the second code line will set $a like $b and THAN - after that - compare the success of this with the value of $c<br><br>maybe usefull for some tricky coding and helpfull to prevent bugs :D<br><br>greetz, Warhog</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="12147">  <div class="votes">
+    <div id="Vu12147">
+    <a href="http://php.net/manual/vote-note.php?id=12147&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd12147">
+    <a href="http://php.net/manual/vote-note.php?id=12147&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V12147" title="56% like this...">
+    16
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#12147" class="name">
+  <strong class="user"><em>yasuo_ohgaki at hotmail dot com</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#12147"> ¶</a><div class="date" title="2001-03-25 11:53"><strong>15 years ago</strong></div>
+  <div class="text" id="Hcom12147">
+<div class="phpcode"><code><span class="html">
+Other Language books' operator precedence section usually include "(" and ")" - with exception of a Perl book that I have. (In PHP "{" and "}" should also be considered also). However, PHP Manual is not listed "(" and ")" in precedence list. It looks like "(" and ")" has higher precedence as it should be.
+<br>
+<br>Note: If you write following code, you would need "()" to get expected value.
+<br>
+<br><span class="default">&lt;?php
+<br>$bar </span><span class="keyword">= </span><span class="default">true</span><span class="keyword">;
+<br></span><span class="default">$str </span><span class="keyword">= </span><span class="string">"TEST"</span><span class="keyword">. (</span><span class="default">$bar </span><span class="keyword">? </span><span class="string">'true' </span><span class="keyword">: </span><span class="string">'false'</span><span class="keyword">) .</span><span class="string">"TEST"</span><span class="keyword">;
+<br></span><span class="default">?&gt;
+<br></span>
+<br>Without "(" and ")" you will get only "true" in $str. 
+<br>(PHP4.0.4pl1/Apache DSO/Linux, PHP4.0.5RC1/Apache DSO/W2K Server)
+<br>It's due to precedence, probably.</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="84862">  <div class="votes">
+    <div id="Vu84862">
+    <a href="http://php.net/manual/vote-note.php?id=84862&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd84862">
+    <a href="http://php.net/manual/vote-note.php?id=84862&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V84862" title="50% like this...">
+    2
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#84862" class="name">
+  <strong class="user"><em>figroc at gmail dot com</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#84862"> ¶</a><div class="date" title="2008-08-02 03:30"><strong>8 years ago</strong></div>
+  <div class="text" id="Hcom84862">
+<div class="phpcode"><code><span class="html">
+The variable symbol '$' should be considered as the highest-precedence operator, so that the variable variables such as $$a[0] won't confuse the parser.&nbsp; [<a href="http://www.php.net/manual/en/language.variables.variable.php]" rel="nofollow" target="_blank">http://www.php.net/manual/en/language.variables.variable.php]</a></span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="78911">  <div class="votes">
+    <div id="Vu78911">
+    <a href="http://php.net/manual/vote-note.php?id=78911&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd78911">
+    <a href="http://php.net/manual/vote-note.php?id=78911&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V78911" title="50% like this...">
+    1
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#78911" class="name">
+  <strong class="user"><em>phpnet dot 20 dot dpnsubs at xoxy dot net</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#78911"> ¶</a><div class="date" title="2007-11-01 02:13"><strong>9 years ago</strong></div>
+  <div class="text" id="Hcom78911">
+<div class="phpcode"><code><span class="html">
+Note that in php the ternary operator ?: has a left associativity unlike in C and C++ where it has right associativity.
+<br>
+<br>You cannot write code like this (as you may have accustomed to in C/C++):
+<br>
+<br><span class="default">&lt;?php
+<br>$a </span><span class="keyword">= </span><span class="default">2</span><span class="keyword">;
+<br>echo (
+<br>&nbsp; &nbsp; </span><span class="default">$a </span><span class="keyword">== </span><span class="default">1 </span><span class="keyword">? </span><span class="string">'one' </span><span class="keyword">: 
+<br>&nbsp; &nbsp; </span><span class="default">$a </span><span class="keyword">== </span><span class="default">2 </span><span class="keyword">? </span><span class="string">'two' </span><span class="keyword">: 
+<br>&nbsp; &nbsp; </span><span class="default">$a </span><span class="keyword">== </span><span class="default">3 </span><span class="keyword">? </span><span class="string">'three' </span><span class="keyword">: 
+<br>&nbsp; &nbsp; </span><span class="default">$a </span><span class="keyword">== </span><span class="default">4 </span><span class="keyword">? </span><span class="string">'four' </span><span class="keyword">: </span><span class="string">'other'</span><span class="keyword">);
+<br>echo </span><span class="string">"\n"</span><span class="keyword">;
+<br></span><span class="comment">// prints 'four'
+<br></span><span class="default">?&gt;
+<br></span>
+<br>You need to add brackets to get the results you want:
+<br>
+<br><span class="default">&lt;?php
+<br>$a </span><span class="keyword">= </span><span class="default">2</span><span class="keyword">;
+<br>
+<br>echo (</span><span class="default">$a </span><span class="keyword">== </span><span class="default">1 </span><span class="keyword">? </span><span class="string">'one' </span><span class="keyword">: 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; (</span><span class="default">$a </span><span class="keyword">== </span><span class="default">2 </span><span class="keyword">? </span><span class="string">'two' </span><span class="keyword">: 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; (</span><span class="default">$a </span><span class="keyword">== </span><span class="default">3 </span><span class="keyword">? </span><span class="string">'three' </span><span class="keyword">: 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; (</span><span class="default">$a </span><span class="keyword">== </span><span class="default">4 </span><span class="keyword">? </span><span class="string">'four' </span><span class="keyword">: </span><span class="string">'other'</span><span class="keyword">) ) ) );
+<br>echo </span><span class="string">"\n"</span><span class="keyword">;
+<br></span><span class="comment">//prints 'two'
+<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="78358">  <div class="votes">
+    <div id="Vu78358">
+    <a href="http://php.net/manual/vote-note.php?id=78358&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd78358">
+    <a href="http://php.net/manual/vote-note.php?id=78358&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V78358" title="43% like this...">
+    -14
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#78358" class="name">
+  <strong class="user"><em>janturon at email dot cz</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#78358"> ¶</a><div class="date" title="2007-10-08 06:42"><strong>9 years ago</strong></div>
+  <div class="text" id="Hcom78358" style="opacity: 0.35;">
+<div class="phpcode"><code><span class="html">
+This is very common problem: set one variable to another, if it is not empty. If it is, set it to something else.<br>For example: set $bar to $foo, if $foo is empty, set $bar to "undefined";<br><br>if(!empty($foo)) $bar= $foo; else $bar= "undefined";<br><br>OR operator can shorten it:<br><br>$bar= @$foo or $bar= "undefined";</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="67997">  <div class="votes">
+    <div id="Vu67997">
+    <a href="http://php.net/manual/vote-note.php?id=67997&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd67997">
+    <a href="http://php.net/manual/vote-note.php?id=67997&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V67997" title="43% like this...">
+    -15
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#67997" class="name">
+  <strong class="user"><em>golotyuk at gmail dot com</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#67997"> ¶</a><div class="date" title="2006-07-09 09:51"><strong>10 years ago</strong></div>
+  <div class="text" id="Hcom67997" style="opacity: 0.35;">
+<div class="phpcode"><code><span class="html">
+Simple POST and PRE incremnt sample:<br><br><span class="default">&lt;?php<br><br>$b </span><span class="keyword">= </span><span class="default">5</span><span class="keyword">;<br></span><span class="default">$a </span><span class="keyword">= ( ( ++</span><span class="default">$b </span><span class="keyword">) &gt; </span><span class="default">5 </span><span class="keyword">); </span><span class="comment">// Pre-increment test<br></span><span class="keyword">echo (int)</span><span class="default">$a</span><span class="keyword">;<br><br></span><span class="default">$b </span><span class="keyword">= </span><span class="default">5</span><span class="keyword">;<br></span><span class="default">$a </span><span class="keyword">= ( ( </span><span class="default">$b</span><span class="keyword">++ ) &gt; </span><span class="default">5 </span><span class="keyword">); </span><span class="comment">// Post-increment test<br></span><span class="keyword">echo (int)</span><span class="default">$a</span><span class="keyword">;<br><br></span><span class="default">?&gt;<br></span><br>This will output 10, because of the difference in post- and pre-increment operations</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="75641">  <div class="votes">
+    <div id="Vu75641">
+    <a href="http://php.net/manual/vote-note.php?id=75641&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd75641">
+    <a href="http://php.net/manual/vote-note.php?id=75641&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V75641" title="40% like this...">
+    -19
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#75641" class="name">
+  <strong class="user"><em>madcoder at gmail dot com</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#75641"> ¶</a><div class="date" title="2007-06-09 03:17"><strong>9 years ago</strong></div>
+  <div class="text" id="Hcom75641" style="opacity: 0.35;">
+<div class="phpcode"><code><span class="html">
+In response to mathiasrav at gmail dot com:<br><br>The reason for that behavior is the parentheses.&nbsp; From the description:<br><br>"Parentheses may be used to force precedence, if necessary. For instance: (1 + 5) * 3 evaluates to 18."<br><br>So the order of operations says that even though the equality operator has higher precedence, the parentheses in your statement force the assignment operator to a higher precedence than the equality operator.<br><br>That said, it still doesn't work the way you expect it to.&nbsp; Neither way works, for these reasons:<br><span class="default">&lt;?php<br></span><span class="keyword">if ( </span><span class="default">$a </span><span class="keyword">!= (</span><span class="default">$a </span><span class="keyword">= </span><span class="default">$b</span><span class="keyword">) )<br></span><span class="default">?&gt;<br></span><br>Order of operations says to do the parentheses first.&nbsp; So you end up with:<br><span class="default">&lt;?php<br>$a </span><span class="keyword">= </span><span class="default">$b</span><span class="keyword">;<br>if ( </span><span class="default">$a </span><span class="keyword">!= </span><span class="default">$a </span><span class="keyword">)<br></span><span class="default">?&gt;<br></span><br>Which is obviously going to be false.&nbsp; Without the parentheses:<br><span class="default">&lt;?php<br></span><span class="keyword">if ( </span><span class="default">$a </span><span class="keyword">!= </span><span class="default">$a </span><span class="keyword">= </span><span class="default">$b </span><span class="keyword">)<br></span><span class="default">?&gt;<br></span><br>Order of operations says to do the inequality first, then the assignment, so you have:<br><span class="default">&lt;?php<br></span><span class="keyword">if ( </span><span class="default">$a </span><span class="keyword">!= </span><span class="default">$a </span><span class="keyword">);<br></span><span class="default">$a </span><span class="keyword">= </span><span class="default">$b</span><span class="keyword">;<br></span><span class="default">?&gt;<br></span><br>Which again is not what you expected, and again will always be false.&nbsp; But because you are only working with values of 0 and 1, you can make use of the XOR operator:<br><br><span class="default">&lt;?php<br></span><span class="keyword">if ( </span><span class="default">$a </span><span class="keyword">^= </span><span class="default">$b </span><span class="keyword">)<br></span><span class="default">?&gt;<br></span><br>This will only be true if 1) $a is 0 and $b is 1, or 2) $a is 1 and $b is 0.&nbsp; That is precisely what you wanted, and it even does the assignment the way you expected it to.<br><br><span class="default">&lt;?php<br></span><span class="keyword">foreach (</span><span class="default">$ourstring </span><span class="keyword">as </span><span class="default">$c</span><span class="keyword">) {<br>&nbsp; if (</span><span class="default">$bold </span><span class="keyword">^= </span><span class="default">$c</span><span class="keyword">[</span><span class="string">'bold'</span><span class="keyword">]) </span><span class="default">$resstring </span><span class="keyword">.= </span><span class="default">bold</span><span class="keyword">;<br>&nbsp; if (</span><span class="default">$underline </span><span class="keyword">^= </span><span class="default">$c</span><span class="keyword">[</span><span class="string">'underline'</span><span class="keyword">]) </span><span class="default">$resstring </span><span class="keyword">.= </span><span class="default">underline</span><span class="keyword">;<br>&nbsp; </span><span class="default">$resstring </span><span class="keyword">.= </span><span class="default">$c</span><span class="keyword">[</span><span class="default">0</span><span class="keyword">];<br>}<br></span><span class="default">?&gt;<br></span><br>That code now works and produces the output you expected.</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="78397">  <div class="votes">
+    <div id="Vu78397">
+    <a href="http://php.net/manual/vote-note.php?id=78397&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd78397">
+    <a href="http://php.net/manual/vote-note.php?id=78397&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V78397" title="39% like this...">
+    -22
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#78397" class="name">
+  <strong class="user"><em>Gautam</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#78397"> ¶</a><div class="date" title="2007-10-10 03:22"><strong>9 years ago</strong></div>
+  <div class="text" id="Hcom78397" style="opacity: 0.35;">
+<div class="phpcode"><code><span class="html">
+<span class="default">&lt;?php<br><br>$result1 </span><span class="keyword">= </span><span class="default">7 </span><span class="keyword">+ </span><span class="default">8 </span><span class="keyword">* </span><span class="default">9</span><span class="keyword">/</span><span class="default">3 </span><span class="keyword">-</span><span class="default">4</span><span class="keyword">;<br></span><span class="default">$result2 </span><span class="keyword">= </span><span class="default">7 </span><span class="keyword">+ </span><span class="default">8 </span><span class="keyword">* (</span><span class="default">9</span><span class="keyword">/</span><span class="default">3 </span><span class="keyword">-</span><span class="default">4</span><span class="keyword">);<br></span><span class="default">$result3 </span><span class="keyword">=(</span><span class="default">7 </span><span class="keyword">+ </span><span class="default">8</span><span class="keyword">)* </span><span class="default">9</span><span class="keyword">/</span><span class="default">3 </span><span class="keyword">-</span><span class="default">4</span><span class="keyword">;<br><br>echo </span><span class="string">"Result1 for 7 + 8 * 9/3 -4 = </span><span class="default">$result1</span><span class="string">&nbsp; Result2 for 7 + 8 * (9/3 -4) = </span><span class="default">$result2</span><span class="string"> and Result3 (7 + 8)* 9/3 -4 = </span><span class="default">$result3</span><span class="string"> "<br></span><span class="comment">/*<br> which gives results as under<br> Result1 for 7 + 8 * 9/3 -4 = 27 Result2 for 7 + 8 * (9/3 -4) = -1 and Result3 (7 + 8)* 9/3 -4 = 41<br> Execution Order is 1) expression in brackets 2) division 3) multiplication 4) addition and 5) subtraction <br>*/<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="87904">  <div class="votes">
+    <div id="Vu87904">
+    <a href="http://php.net/manual/vote-note.php?id=87904&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd87904">
+    <a href="http://php.net/manual/vote-note.php?id=87904&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V87904" title="39% like this...">
+    -29
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#87904" class="name">
+  <strong class="user"><em>pgarvin76+php dot net at NOSPAMgmail dot com</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#87904"> ¶</a><div class="date" title="2008-12-29 04:43"><strong>8 years ago</strong></div>
+  <div class="text" id="Hcom87904" style="opacity: 0.35;">
+<div class="phpcode"><code><span class="html">
+Method chaining is read left to right (left associative):<br><span class="default">&lt;?php<br><br></span><span class="keyword">class </span><span class="default">Test_Method_Chain<br></span><span class="keyword">{<br>&nbsp; &nbsp; public function </span><span class="default">One</span><span class="keyword">()<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; echo </span><span class="string">"One" </span><span class="keyword">. </span><span class="default">PHP_EOL</span><span class="keyword">;<br>&nbsp; &nbsp; &nbsp; &nbsp; return </span><span class="default">$this</span><span class="keyword">;<br>&nbsp; &nbsp; }<br><br>&nbsp; &nbsp; public function </span><span class="default">Two</span><span class="keyword">()<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; echo </span><span class="string">"Two" </span><span class="keyword">. </span><span class="default">PHP_EOL</span><span class="keyword">;<br>&nbsp; &nbsp; &nbsp; &nbsp; return </span><span class="default">$this</span><span class="keyword">;<br>&nbsp; &nbsp; }<br><br>&nbsp; &nbsp; public function </span><span class="default">Three</span><span class="keyword">()<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; echo </span><span class="string">"Three" </span><span class="keyword">. </span><span class="default">PHP_EOL</span><span class="keyword">;<br>&nbsp; &nbsp; &nbsp; &nbsp; return </span><span class="default">$this</span><span class="keyword">;<br>&nbsp; &nbsp; }<br>}<br><br></span><span class="default">$test </span><span class="keyword">= new </span><span class="default">Test_Method_Chain</span><span class="keyword">();<br><br></span><span class="default">$test</span><span class="keyword">-&gt;</span><span class="default">One</span><span class="keyword">()-&gt;</span><span class="default">Two</span><span class="keyword">()-&gt;</span><span class="default">Three</span><span class="keyword">();<br><br></span><span class="comment">/* Ouputs:<br>One<br>Two<br>Three<br>*/<br></span><span class="default">?&gt;</span>
+</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="56433">  <div class="votes">
+    <div id="Vu56433">
+    <a href="http://php.net/manual/vote-note.php?id=56433&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd56433">
+    <a href="http://php.net/manual/vote-note.php?id=56433&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V56433" title="39% like this...">
+    -25
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#56433" class="name">
+  <strong class="user"><em>rick at nomorespam dot fourfront dot ltd dot uk</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#56433"> ¶</a><div class="date" title="2005-09-02 03:51"><strong>11 years ago</strong></div>
+  <div class="text" id="Hcom56433" style="opacity: 0.35;">
+<div class="phpcode"><code><span class="html">
+A quick note to any C developers out there, assignment expressions are not interpreted as you may expect - take the following code ;-<br><br><span class="default">&lt;?php<br>$a</span><span class="keyword">=array(</span><span class="default">1</span><span class="keyword">,</span><span class="default">2</span><span class="keyword">,</span><span class="default">3</span><span class="keyword">);<br></span><span class="default">$b</span><span class="keyword">=array(</span><span class="default">4</span><span class="keyword">,</span><span class="default">5</span><span class="keyword">,</span><span class="default">6</span><span class="keyword">);<br></span><span class="default">$c</span><span class="keyword">=</span><span class="default">1</span><span class="keyword">;<br><br></span><span class="default">$a</span><span class="keyword">[</span><span class="default">$c</span><span class="keyword">++]=</span><span class="default">$b</span><span class="keyword">[</span><span class="default">$c</span><span class="keyword">++];<br><br></span><span class="default">print_r</span><span class="keyword">( </span><span class="default">$a </span><span class="keyword">) ;<br></span><span class="default">?&gt;<br></span><br>This will output;-<br>Array ( [0] =&gt; 1 [1] =&gt; 6 [2] =&gt; 3 )<br>as if the code said;-<br>$a[1]=$b[2];<br><br>Under a C compiler the result is;-<br>Array ( [0] =&gt; 1 [1] =&gt; 5 [2] =&gt; 3 )<br>as if the code said;-<br>$a[1]=$b[1];<br><br>It would appear that in php the increment in the left side of the assignment is processed prior to processing the right side of the assignment, whereas in C, neither increment occurs until after the assignment.</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="117461">  <div class="votes">
+    <div id="Vu117461">
+    <a href="http://php.net/manual/vote-note.php?id=117461&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd117461">
+    <a href="http://php.net/manual/vote-note.php?id=117461&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V117461" title="34% like this...">
+    -16
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#117461" class="name">
+  <strong class="user"><em>arth dot inbox+php dot net at gmail dot com</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#117461"> ¶</a><div class="date" title="2015-06-12 02:51"><strong>1 year ago</strong></div>
+  <div class="text" id="Hcom117461" style="opacity: 0.35;">
+<div class="phpcode"><code><span class="html">
+&amp;= operator.<br><br>It is binary and followed expressions give different results:<br><br>$a = $b = 1;<br>echo $a &amp;= 2;&nbsp; // 0<br>echo $a = $a &amp;&amp; 2; // 1</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="76385">  <div class="votes">
+    <div id="Vu76385">
+    <a href="http://php.net/manual/vote-note.php?id=76385&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd76385">
+    <a href="http://php.net/manual/vote-note.php?id=76385&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V76385" title="37% like this...">
+    -28
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#76385" class="name">
+  <strong class="user"><em>me at robrosenbaum dot com</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#76385"> ¶</a><div class="date" title="2007-07-12 12:16"><strong>9 years ago</strong></div>
+  <div class="text" id="Hcom76385" style="opacity: 0.35;">
+<div class="phpcode"><code><span class="html">
+The scope resolution operator ::, which is missing from the list above, has higher precedence than [], and lower precedence than 'new'. This means that self::$array[$var] works as expected.</span>
+</code></div>
+  </div>
+ </div>
+  <div class="note" id="86566">  <div class="votes">
+    <div id="Vu86566">
+    <a href="http://php.net/manual/vote-note.php?id=86566&amp;page=language.operators&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd86566">
+    <a href="http://php.net/manual/vote-note.php?id=86566&amp;page=language.operators&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V86566" title="32% like this...">
+    -81
+    </div>
+  </div>
+  <a href="http://php.net/manual/pt_BR/language.operators.php#86566" class="name">
+  <strong class="user"><em>ddascalescu at gmail dot com</em></strong></a><a class="genanchor" href="http://php.net/manual/pt_BR/language.operators.php#86566"> ¶</a><div class="date" title="2008-10-23 06:53"><strong>8 years ago</strong></div>
+  <div class="text" id="Hcom86566" style="opacity: 0.35;">
+<div class="phpcode"><code><span class="html">
+The -&gt; operator, not listed above, is called "object operator" (T_OBJECT_OPERATOR).</span>
+</code></div>
+  </div>
+ </div></div>
+
+ <div class="foot"><a href="http://php.net/manual/add-note.php?sect=language.operators&amp;redirect=http://php.net/manual/pt_BR/language.operators.php"><img src="./PHP_ Operadores - Manual_files/notes-add@2x.png" alt="add a note" width="12" height="12"> <small>add a note</small></a></div>
+</section>    </section><!-- layout-content -->
+        <aside class="layout-menu">
+    
+        <ul class="parent-menu-list">
+                                    <li>
+                <a href="http://php.net/manual/pt_BR/langref.php">Referência da Linguagem</a>
+    
+                                    <ul class="child-menu-list">
+    
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.basic-syntax.php" title="Sintaxe Básica">Sintaxe Básica</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.types.php" title="Tipos">Tipos</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.variables.php" title="Variáveis">Variáveis</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.constants.php" title="Constantes">Constantes</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.expressions.php" title="Expressões">Expressões</a>
+                        </li>
+                          
+                        <li class="current">
+                            <a href="http://php.net/manual/pt_BR/language.operators.php" title="Operadores">Operadores</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.control-structures.php" title="Estruturas de Controle">Estruturas de Controle</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.functions.php" title="Funções">Funções</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.oop5.php" title="Classes e Objetos">Classes e Objetos</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.namespaces.php" title="Namespaces">Namespaces</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.errors.php" title="Erros">Erros</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.exceptions.php" title="Exceções">Exceções</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.generators.php" title="Generators">Generators</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/language.references.php" title="Referências">Referências</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/reserved.variables.php" title="Variáveis pré-​definidas">Variáveis pré-​definidas</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/reserved.exceptions.php" title="Exceções pré-​definidas">Exceções pré-​definidas</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/reserved.interfaces.php" title="Interfaces e Classes pré-​definidas">Interfaces e Classes pré-​definidas</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/context.php" title="Opções e parâmetros de contexto">Opções e parâmetros de contexto</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/pt_BR/wrappers.php" title="Protocolos e Wrappers suportados">Protocolos e Wrappers suportados</a>
+                        </li>
+                            
+                    </ul>
+                    
+            </li>
+                        
+                    </ul>
+    </aside>
+
+
+  </div><!-- layout -->
+         
+  <footer>
+    <div class="container footer-content">
+      <div class="row-fluid">
+      <ul class="footmenu">
+        <li><a href="http://php.net/copyright.php">Copyright © 2001-2017 The PHP Group</a></li>
+        <li><a href="http://php.net/my.php">My PHP.net</a></li>
+        <li><a href="http://php.net/contact.php">Contact</a></li>
+        <li><a href="http://php.net/sites.php">Other PHP.net sites</a></li>
+        <li><a href="http://php.net/mirrors.php">Mirror sites</a></li>
+        <li><a href="http://php.net/privacy.php">Privacy policy</a></li>
+      </ul>
+      </div>
+    </div>
+  </footer>
+
+    
+ <!-- External and third party libraries. -->
+ <script type="text/javascript" src="./PHP_ Operadores - Manual_files/jquery.min.js.download"></script>
+<script type="text/javascript" src="./PHP_ Operadores - Manual_files/cached(4).php"></script>
+<script type="text/javascript" src="./PHP_ Operadores - Manual_files/cached(5).php"></script>
+<script type="text/javascript" src="./PHP_ Operadores - Manual_files/cached(6).php"></script>
+<script type="text/javascript" src="./PHP_ Operadores - Manual_files/cached(7).php"></script>
+<script type="text/javascript" src="./PHP_ Operadores - Manual_files/cached(8).php"></script>
+<script type="text/javascript" src="./PHP_ Operadores - Manual_files/cached(9).php"></script>
+
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="./PHP_ Operadores - Manual_files/to-top@2x.png"></a>
+
+
+
+
+</body></html>
